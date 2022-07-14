@@ -13,9 +13,10 @@
             margin: 0;
             padding: 0;
             line-height: 100%;
+            color: black;
         }
 
-        [style*="sans-serif"] {font-family: sans-serif !important;}
+        [style*="sans-serif"] {font-family: sans-serif !important;line-height: 1.25;}
 
         img {
             outline: none;
@@ -26,6 +27,11 @@
             margin: 0;
             padding: 0;
             display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
         table td {
@@ -48,15 +54,20 @@
             font-size: 18px;
             font-weight: bold;
         }
-        .features-td-img {
-            padding-right: 10px;
-        }
-        .features-td-p {
-            padding-right: 10px;
-            font-size: 12px;
-        }
-        .last-td {
+        .features-td {
             padding-right: 0;
+            padding-left: 0;
+        }
+        .features-img {
+            padding-right: 10px;
+            padding-left: 0;
+        }
+        .features-span {
+            font-size: 13px;
+            color: black !important;
+        }
+        .features {
+            padding-left: 0;
         }
         .features-sub {
             font-size: 14px;
@@ -71,6 +82,48 @@
         .button-td {
             padding-top: 20px;
         }
+
+        @media (max-width: 600px) {
+            .features-td {
+                display: block;
+                padding-top: 30px;
+            }
+            .features-td table {
+                width: 280px;
+            }
+            .features-span {
+                font-size: 20px;
+                width: 200px;
+            }
+
+            .features-img {
+                width: 80px !important;
+            }
+            .features-img img {
+                width: 100%;
+            }
+            .table-padding {
+                width: 40px !important;
+            }
+            .title-td {
+                padding-top: 35px;
+                padding-bottom: 35px;
+
+                font-size: 22px;
+            }
+            .header-td {
+                font-size: 28px;
+            }
+            .title-td br {
+                display: none;
+            }
+            .button-td img {
+                height: 50px;
+            }
+            .features-sub {
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 
@@ -78,7 +131,7 @@
 <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff">
     <tr>
         <td>
-            <table cellpadding="0" cellspacing="0" width="600" bgcolor="#f7f7f7" align="center">
+            <table cellpadding="0" cellspacing="0" bgcolor="#f7f7f7" align="center">
                 <tr>
                     <td><a href="https://www.sima-land.ru/posuda/"><img src="https://github.com/Kansasin/email_test/blob/main/posuda.png?raw=true" alt="background-posuda"></a></td>
                 </tr>
@@ -87,7 +140,7 @@
     </tr>
     <tr>
         <td>
-            <table cellpadding="0" cellspacing="0" width="600" bgcolor="#f7f7f7" align="center">
+            <table cellpadding="0" cellspacing="0" bgcolor="#f7f7f7" align="center">
                 <tr>
                     <td class="title-td" align="center" style="font-family: sans-serif">Огромный выбор посуды и кухонных принадлежностей<br/> всегда в наличии на нашем сайте.</td>
                 </tr>
@@ -96,39 +149,119 @@
                 </tr>
                 <tr>
                     <td>
-                        <table cellpadding="0" cellspacing="0" width="540" bgcolor="#f7f7f7" align="center" height="180">
+                        <table cellpadding="0" cellspacing="0" bgcolor="#f7f7f7" align="center" height="180" class="features" width="600">
                             <tr valign="middle">
-                                <td class="features-td-img" width="55"><a href="https://www.sima-land.ru/tovary-s-lyubimymi-geroyami/"><img src="https://github.com/Kansasin/email_test/blob/main/icon1.png?raw=true" alt="icon"></a></td>
-                                <td class="features-td-p" width="120"><p style="font-family: sans-serif">Больше 750 000 <br/>товаров для дома, <br>работы и отдыха</p></td>
-                                <td class="features-td-img" width="55"><a href="https://www.sima-land.ru/skidka-za-obem/"><img src="https://github.com/Kansasin/email_test/blob/main/icon2.png?raw=true" alt="icon"></a></td>
-                                <td class="features-td-p" width="120"><p style="font-family: sans-serif">Скидки на крупные <br/>заказы*</p></td>
-                                <td class="features-td-img" width="55"><a href="https://www.sima-land.ru/nashi-razrabotki/"><img src="https://github.com/Kansasin/email_test/blob/main/icon3.png?raw=true" alt="icon"></a></td>
-                                <td class="features-td-p last-td" width="120"><p style="font-family: sans-serif">Продукция <br/>собственной <br>разработки</p></td>
+                                <td width="25" class="table-padding"></td>
+                                <td class="features-td"><a href="https://www.sima-land.ru/tovary-s-lyubimymi-geroyami/">
+                                    <table cellpadding="0" cellspacing="0" bgcolor="#f7f7f7" align="center" width="180">
+                                        <tr>
+                                            <td width="50" class="features-img">
+                                                <img src="https://github.com/Kansasin/email_test/blob/main/icon1.png?raw=true" alt="icon">
+                                            </td>
+                                            <td width="120" class="features-span">
+                                                <span style="font-family: sans-serif;">Больше 750 000 <br/>товаров для дома, <br>работы и отдыха</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </a></td>
+                                <td class="features-td"><a href="https://www.sima-land.ru/skidka-za-obem/">
+                                    <table cellpadding="0" cellspacing="0" bgcolor="#f7f7f7" align="center" width="180">
+                                        <tr>
+                                            <td width="50" class="features-img">
+                                                <img src="https://github.com/Kansasin/email_test/blob/main/icon2.png?raw=true" alt="icon">
+                                            </td>
+                                            <td width="120" class="features-span">
+                                                <span style="font-family: sans-serif;">Скидки на крупные <br/>заказы*</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </a></td>
+                                <td class="features-td"><a href="https://www.sima-land.ru/nashi-razrabotki/">
+                                    <table cellpadding="0" cellspacing="0" bgcolor="#f7f7f7" align="center" width="180">
+                                        <tr>
+                                            <td width="50" class="features-img">
+                                                <img src="https://github.com/Kansasin/email_test/blob/main/icon3.png?raw=true" alt="icon">
+                                            </td>
+                                            <td width="120" class="features-span">
+                                                <span style="font-family: sans-serif;">Продукция <br/>собственной <br>разработки</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </a></td>
+                                <td width="25"></td>
                             </tr>
-                            <tr valign="top">
-                                <td class="features-td-img" width="55"><a href="https://www.sima-land.ru/info/oplata/"><img src="https://github.com/Kansasin/email_test/blob/main/icon4.png?raw=true" alt="icon"></a></td>
-                                <td class="features-td-p" width="120"><p style="font-family: sans-serif">Удобные <br/>формы оплаты</p></td>
-                                <td class="features-td-img" width="55"><a href="https://www.sima-land.ru/info/delivery/"><img src="https://github.com/Kansasin/email_test/blob/main/icon5.png?raw=true" alt="icon"></a></td>
-                                <td class="features-td-p" width="120"><p style="font-family: sans-serif">Доставка <br/>в 2000 городов</p></td>
-                                <td class="features-td-img" width="55"><a href="https://www.sima-land.ru/info/dogovor/"><img src="https://github.com/Kansasin/email_test/blob/main/icon6.png?raw=true" alt="icon"></a></td>
-                                <td class="features-td-p last-td" width="120"><p style="font-family: sans-serif">Работа <br/>по договору</p></td>
+                            <tr valign="middle">
+                                <td width="25"></td>
+                                <td class="features-td"><a href="https://www.sima-land.ru/info/oplata/">
+                                    <table cellpadding="0" cellspacing="0" bgcolor="#f7f7f7" align="center" width="180">
+                                        <tr>
+                                            <td width="50" class="features-img">
+                                                <img src="https://github.com/Kansasin/email_test/blob/main/icon4.png?raw=true" alt="icon">
+                                            </td>
+                                            <td width="120" class="features-span">
+                                                <span style="font-family: sans-serif;">Удобные <br/>формы оплаты</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </a></td>
+                                <td class="features-td"><a href="https://www.sima-land.ru/info/delivery/">
+                                    <table cellpadding="0" cellspacing="0" bgcolor="#f7f7f7" align="center" width="180">
+                                        <tr>
+                                            <td width="50" class="features-img">
+                                                <img src="https://github.com/Kansasin/email_test/blob/main/icon5.png?raw=true" alt="icon">
+                                            </td>
+                                            <td width="120" class="features-span">
+                                                <span style="font-family: sans-serif;">Доставка <br/>в 2000 городов</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </a></td>
+                                <td class="features-td"><a href="https://www.sima-land.ru/info/dogovor/">
+                                    <table cellpadding="0" cellspacing="0" bgcolor="#f7f7f7" align="center" width="180">
+                                        <tr>
+                                            <td width="50" class="features-img">
+                                                <img src="https://github.com/Kansasin/email_test/blob/main/icon6.png?raw=true" alt="icon">
+                                            </td>
+                                            <td width="120" class="features-span">
+                                                <span style="font-family: sans-serif;">Работа <br/>по договору</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </a></td>
+                                <td width="25"></td>
                             </tr>
                         </table>
                     </td>
                 </tr>
                 <tr>
-                    <td align="center"><a href="https://www.sima-land.ru/info/"><img src="https://github.com/Kansasin/email_test/blob/main/button1.png?raw=true" alt="Узнать подробнее"></a></td>
+                    <td align="center" class="button-td"><a href="https://www.sima-land.ru/info/"><img src="https://github.com/Kansasin/email_test/blob/main/button1.png?raw=true" alt="Узнать подробнее"></a></td>
                 </tr>
                 <tr align="center">
                     <td class="features-sub" style="font-family: sans-serif">* Более подробную информацию вы можете получить у менеджера.</td>
                 </tr>
                 <tr>
                     <td>
-                        <table cellpadding="0" cellspacing="0" width="560" bgcolor="#f7f7f7" align="center">
-                            <tr><td class="card-td"><a href="https://www.sima-land.ru/posuda/servirovka-stola/"><img src="https://github.com/Kansasin/email_test/blob/main/card1.png?raw=true" alt="card"></a></td></tr>
-                            <tr><td class="card-td"><a href="https://www.sima-land.ru/posuda/posuda-dlya-prigotovleniya-pischi/"><img src="https://github.com/Kansasin/email_test/blob/main/card2.png?raw=true" alt="card"></a></td></tr>
-                            <tr><td class="card-td"><a href="https://www.sima-land.ru/posuda/kuhonnye-prinadlezhnosti-i-instrumenty/"><img src="https://github.com/Kansasin/email_test/blob/main/card3.png?raw=true" alt="card"></a></td></tr>
-                            <tr><td class="card-td"><a href="https://www.sima-land.ru/posuda/nozhi/"><img src="https://github.com/Kansasin/email_test/blob/main/card4.png?raw=true" alt="card"></a></td></tr>
+                        <table cellpadding="0" cellspacing="0" bgcolor="#f7f7f7" align="center">
+                            <tr>
+                                <td width="20"></td>
+                                <td class="card-td"><a href="https://www.sima-land.ru/posuda/servirovka-stola/"><img src="https://github.com/Kansasin/email_test/blob/main/card1.png?raw=true" alt="card"></a></td>
+                                <td width="20"></td>
+                            </tr>
+                            <tr>
+                                <td width="20"></td>
+                                <td class="card-td"><a href="https://www.sima-land.ru/posuda/posuda-dlya-prigotovleniya-pischi/"><img src="https://github.com/Kansasin/email_test/blob/main/card2.png?raw=true" alt="card"></a></td>
+                                <td width="20"></td>
+                            </tr>
+                            <tr>
+                                <td width="20"></td>
+                                <td class="card-td"><a href="https://www.sima-land.ru/posuda/kuhonnye-prinadlezhnosti-i-instrumenty/"><img src="https://github.com/Kansasin/email_test/blob/main/card3.png?raw=true" alt="card"></a></td>
+                                <td width="20"></td>
+                            </tr>
+                            <tr>
+                                <td width="20"></td>
+                                <td class="card-td"><a href="https://www.sima-land.ru/posuda/nozhi/"><img src="https://github.com/Kansasin/email_test/blob/main/card4.png?raw=true" alt="card"></a></td>
+                                <td width="20"></td>
+                            </tr>
                         </table>
                     </td>
                 </tr>
